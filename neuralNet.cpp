@@ -35,6 +35,22 @@ void NeuralNet::insertSample(float* sampleBuff){
     
 }
 
+/*
+
+for(int i=0; i<NUMBER_OF_ROWS; i++){
+    float* rowptr = netInputs[i][0];
+    
+    for(int j=0; j<NUMBER_OF_COLUMNS; j++){
+        
+        memmove(rowptr, &rowptr[1], sizeof(float)*(NUMBER_OF_COLUMNS-1));
+        rowptr[0] = sample; 
+    
+    }
+
+}
+
+*/
+
 
 
 
