@@ -10,9 +10,13 @@ int main(){
     CSVreader indata("verificationData.csv");
 	indata.readCSV();
 	vector<vector<float>> data = indata.getVectorArray();
-    for(int k=0; k<30; k++){
+
+
+
+    for(int k=0; k<20; k++){
+
         vector<float> firstrow = data[k];
-        
+
         float temp[11];
         
         for(int i=0; i<20; i++){
@@ -20,10 +24,12 @@ int main(){
             for(int j=0; j<11; j++){
                 temp[j] = firstrow[(i + j*20)];
             }
-            
+ 
             mynet.insertSamples(temp);    
             
         }
+        
+        
         
         mynet.predict();
      }
